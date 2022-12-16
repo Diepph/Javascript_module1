@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Testing JavaScript</title>
+    </head>
+<body>
+    <h1>Greeting</h1>
+    <p id="target"></p>
+    <script>
+        const answer = confirm('Should i calculate the square root?');
+        if (answer) {
+            //console.log(answer);
+            var strLength = prompt('Enter the length');
+            var length = parseInt(strLength,10);
+            if (length<0) {
+                document.querySelector('#target').innerHTML = 'The square root of a negative number is not defined';
+            } else {
+                var squareRoot = length*length;
+                document.querySelector('#target').innerHTML = 'The square root is '+ squareRoot;
+            }
+        }else{
+            document.querySelector('#target').innerHTML = 'The square root is not calculated';
+        }
+    </script>
+</body>
+</html>

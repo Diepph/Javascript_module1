@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Testing JavaScript</title>
+    </head>
+<body>
+    <h1>Greeting</h1>
+    <p id="target"></p>
+    <ul id="listYear"></ul>
+    <script>
+        var list = document.getElementById('listYear');
+        var strYear1 = prompt('Enter the start year');
+        var strartYear = parseInt(strYear1,10);
+        if (strartYear<0) {
+            document.querySelector('#target').innerHTML = 'start year can not be smaller than 0';
+        }else{
+            var strYear2 = prompt('Enter the end year');
+            var endYear = parseInt(strYear2,10);
+            if (endYear<0 || endYear<strartYear) {
+                document.querySelector('#target').innerHTML = 'end year can not be smaller than 0 or start year';
+            } else {
+                for (let index = strartYear; index < endYear; index++) {
+                    if ((0 == index % 4) && (0 != index % 100) || (0 == index % 400)) {
+                        var li = document.createElement('li');
+                        li.innerText = index;
+                        list.appendChild(li);
+                    }
+                }
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

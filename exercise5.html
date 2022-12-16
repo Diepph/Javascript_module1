@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Testing JavaScript</title>
+    </head>
+<body>
+    <h1>Greeting</h1>
+    <p id="target"></p>
+    <script>
+        var stryear = prompt('Enter the year');
+        var year = parseInt(stryear,10);
+
+            //three conditions to find out the leap year
+        if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
+            document.querySelector('#target').innerHTML = year + ' is leap year';
+        } else {
+            document.querySelector('#target').innerHTML = year + ' is not leap year';
+        }
+
+    </script>
+</body>
+</html>

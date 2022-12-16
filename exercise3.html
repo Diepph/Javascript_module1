@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Testing JavaScript</title>
+    </head>
+<body>
+    <h1>Results</h1>
+    <p id="sum"></p>
+    <p id="product"></p>
+    <p id="average"></p>
+    <script>
+        const strNum1 = prompt('Enter number 1:');
+        var num1 = parseInt(strNum1,10);
+        const strNum2 = prompt('Enter number 2:');
+        var num2 = parseInt(strNum2,10);
+        const strNum3 = prompt('Enter number 3:');
+        var num3 = parseInt(strNum3,10);
+       // document.write('Noice to meet you, ' + num3);
+       var sum = num1+num2+num3;
+       var product = num1*num2*num3;
+       var average = sum/3;
+        document.querySelector('#sum').innerHTML = 'Sum of ' + strNum1 + ' + '+ strNum2 +' + '+strNum3 +' is: '+ sum;
+        document.querySelector('#product').innerHTML = 'Product of ' + num1 + ' * '+ num2 +' * '+num3 +' is: '+ product;
+        document.querySelector('#average').innerHTML = 'Average of ' + num1 + ' '+ num2 +' '+num3 +' is: '+average;
+    </script>
+</body>
+</html>

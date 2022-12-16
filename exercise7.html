@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Testing JavaScript</title>
+    </head>
+<body>
+    <h1>Greeting</h1>
+    <p id="target"></p>
+    <script>
+        var strNumber = prompt('Enter a number of dice roll');
+        var number = parseInt(strNumber,10);
+        var sum =0;
+        for (let index = 0; index < number; index++) {
+            var randomNumber = Math.floor(Math.random()*6) +1;
+            sum+=randomNumber
+        }
+        document.querySelector('#target').innerHTML = 'Total of '+ number + ' times is '+ sum;
+    </script>
+</body>
+</html>
